@@ -223,7 +223,7 @@ def launch(name: str, apps: dict[str, dict]) -> None:
     terminal = entry["terminal"]
 
     if terminal:
-        term = shlex.split(os.getenv("TERMINAL") or "xterm -e")
+        term = shlex.split(os.getenv("TERM") or "xterm -e")
         args = term + shlex.split(cmd)
     else:
         args = shlex.split(cmd)
